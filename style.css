@@ -149,7 +149,7 @@ body {
   overflow: hidden;
   display: flex;
   align-items: center;
-  position: relative;
+  /* position: relative; */
   z-index: 9999;
 }
 
@@ -157,6 +157,18 @@ body {
   font-size: 7vw;
   text-transform: uppercase;
   line-height: 7.3vw;
+  position: relative;
+}
+
+
+#hero1::before {
+    content: "01";
+    font-size: 3vw;
+    position: absolute;
+    font-family: "Silk Serif";
+    font-weight: 400;
+    left: 18%;
+    top: 33%;
 }
 
 .hero h2 {
@@ -254,6 +266,17 @@ body {
 .page4-content h1 {
     font-size: 7vw;
     text-transform: uppercase;
+    position: relative;
+}
+
+.page4-content h1::before {
+  content: "03";
+  font-size: 3vw;
+  position: absolute;
+  font-family: "Silk Serif";
+  font-weight: 400;
+  left: -15%;
+  top: 5%;
 }
 
 .page4-content .underline {
@@ -389,4 +412,64 @@ body {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-direction: reverse;
+}
+
+.footer {
+  min-height: 80vh;
+  width: 100%;
+  position: relative;
+  padding-left: 28vw;
+  padding-right: 6vw;
+  background-color: #151515;
+}
+
+.footer h1 {
+  font-size: 7vw;
+  padding-top: 4vw;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.footer h1::before {
+  content: "04";
+  position: absolute;
+  font-size: 3.5vw;
+  font-family: "Silk Serif";
+  font-weight: 400;
+  left: -20%;
+  top: 33%;
+}
+
+.underline {
+  height: 2px;
+  background-color: #fff;
+  margin: 5.3vw 0;
+}
+
+.footer-div {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding-right: 4vw;
+}
+
+.box h6{
+  font-size: 1vw;
+  margin-bottom: 2vw;
+}
+
+.box {
+  width: 30%;
+  line-height: 1.8vw;
+}
+
+.box h5{
+  font-size: 1.7vw;
+  font-weight: 500;
+}
+
+.credits {
+  margin-top: 5.3vw;
+  border-top: 2px solid #fff;
+  padding: 2.8vw 0;
 }

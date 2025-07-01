@@ -1,3 +1,13 @@
+function loco() {
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector('.main'),
+    smooth: true
+});
+  
+}
+
+// loco();
+
 function loadingAnimation() {
   var tl = gsap.timeline();
   tl.from(".line h1", {
@@ -38,29 +48,34 @@ function loadingAnimation() {
   });
   tl.from(".nav", {
     opacity: 0,
-    ease: "power2.in"
-  })
+    ease: "power2.in",
+  });
   tl.from("#hero1 h1, #hero2 h1, #hero3 h2, #hero4 h1", {
     y: 150,
     stagger: 0.1,
-    ease: "power2.out"
-  })
+    ease: "power2.out",
+  });
+  tl.from("#hero1", {
+    opacity: 0,
+    // ease: "power2.out",
+  },"-=1");
   tl.to(".loader", {
     display: "none",
   });
+  
 }
 
 loadingAnimation();
 
 function moveCursor() {
-  document.addEventListener("mousemove", function(dets) {
+  document.addEventListener("mousemove", function (dets) {
     gsap.to(".cursor", {
       left: dets.x,
       top: dets.y,
-    })
-  })
+    });
+  });
 
   Shery.makeMagnet(".nav-part2 h4");
 }
 
-moveCursor()
+moveCursor();
